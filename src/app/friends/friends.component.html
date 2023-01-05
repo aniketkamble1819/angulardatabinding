@@ -1,0 +1,8 @@
+<p>friends </p>
+<input type="text" value=""  [(ngModel)]="friend"  >
+<button (click)="add()">add</button>
+{{ friends }}
+<ul>
+    <li *ngFor="let f of friends,let i=index">{{i+1}}:{{f}} <button (click)="remove(i)">X</button></li>
+</ul>
+<h2 *ngIf="friends.length===0"  style="color: red;">make a new friend</h2>
